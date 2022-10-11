@@ -8,7 +8,6 @@ class main {
 
     //boolean som ska bli false när spelaren har gissat rätt.
     boolean numberNotCorrect = true;
-    boolean numberCorrect = false;
 
     //antal gissningar
     int guesses = 0;
@@ -36,8 +35,8 @@ class main {
         guesses++;
         System.out.println("Antal gissningar: " + guesses);
         System.out.println("Du gissa rätt!");
-        cheekifcorrect(numberNotCorrect,numberCorrect);
-        System.out.println(cheekifcorrect(numberNotCorrect,numberCorrect));
+        cheekifcorrect(numberNotCorrect);
+        //System.out.println(cheekifcorrect(numberNotCorrect,numberCorrect));
         //reset
         guesses = 0;
         //reset
@@ -48,8 +47,8 @@ class main {
     }
   }
 
-  static boolean cheekifcorrect(boolean numberNotCorrect, boolean numberCorrect) {
-    numberNotCorrect = numberCorrect;
+  static boolean cheekifcorrect(boolean numberNotCorrect) {
+   numberNotCorrect = false;
     return numberNotCorrect;
   }
 }
